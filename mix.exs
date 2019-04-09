@@ -45,7 +45,7 @@ defmodule Transmit.MixProject do
 
   defp description do
     """
-    Transmit
+    Plug for handling the creation of presigned urls for direct client-side uploading
     """
   end
 

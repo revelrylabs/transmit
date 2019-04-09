@@ -11,13 +11,6 @@ defmodule Transmit.MixProject do
       description: description(),
       elixirc_paths: elixirc_paths(Mix.env()),
       package: package(),
-      test_coverage: [tool: ExCoveralls],
-      preferred_cli_env: [
-        coveralls: :test,
-        "coveralls.detail": :test,
-        "coveralls.post": :test,
-        "coveralls.html": :test
-      ],
 
       # Docs
       name: "Transmit",
@@ -46,8 +39,7 @@ defmodule Transmit.MixProject do
       {:ex_aws, "~> 2.0", optional: true},
       {:ex_aws_s3, "~> 2.0", optional: true},
       {:jason, "~> 1.0", optional: true},
-      {:ex_doc, "~> 0.20", only: :dev},
-      {:excoveralls, "~> 0.10", only: :test}
+      {:ex_doc, "~> 0.20", only: :dev}
     ]
   end
 

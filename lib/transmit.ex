@@ -8,9 +8,11 @@ defmodule Transmit do
 
   ```elixir
   defmodule MyAppWeb.Router do
+    use MyAppWeb, :router
+
     ...
 
-    forward("/signer", to: Transmit, signer: Transmit.S3Signer, bucket: "images", path: "uploads")
+    forward("/signer", Transmit, signer: Transmit.S3Signer, bucket: "images", path: "uploads")
 
     ...
   ```

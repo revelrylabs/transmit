@@ -27,6 +27,34 @@ defmodule Transmit do
 
   Different signers can be used by implementing the `Transmit.Signer` behaviour
 
+  ## JavaScript setup
+
+  - Add `"transmit": "file:../deps/transmit"` to your `dependencies` in your `package.json`
+  - run `npm install`
+
+  ## Usage
+
+  ```javascript
+  import Transmit from 'transmit'
+
+  const imageUploadElement = document.getElementById('avatar_uploader')
+  const urlElement = document.getElementById('avatar_url')
+  // Set up so that we upload to S3 when a file is given to the imageUploadElement
+  imageUploadElement.onchange = async () => {
+    const file = imageUploadElement.files[0]
+    if (file === null) {
+      alert('No file selected.')
+    } else {
+       const url = await Transmit.uploadFileToS3(
+        file,
+        '/uploads/sign'
+      )
+      //saved to avatar_url element
+      urlElement.value = url
+    }
+  }
+  ```
+
   """
 
   import Plug.Conn

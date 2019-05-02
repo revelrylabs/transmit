@@ -1,0 +1,22 @@
+{
+  "name": "transmit",
+  "version": "0.2.0",
+  "description": "Plug for handling the creation of presigned urls for direct client-side uploading",
+  "main": "./priv/static/transmit.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/revelrylabs/transmit.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/revelrylabs/transmit/issues"
+  },
+  "homepage": "https://github.com/revelrylabs/transmit",
+  "files": [
+    "README.md",
+    "LICENSE.md",
+    "package.json",
+    "priv/static/transmit.js"
+  ]
+}

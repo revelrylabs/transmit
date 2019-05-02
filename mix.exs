@@ -51,7 +51,7 @@ defmodule Transmit.MixProject do
 
   defp package do
     [
-      files: ["lib", "mix.exs", "README.md", "LICENSE", "CHANGELOG.md"],
+      files: ["lib", "priv", "mix.exs", "README.md", "LICENSE", "CHANGELOG.md", "package.json"],
       maintainers: ["Revelry Labs"],
       licenses: ["MIT"],
       links: %{

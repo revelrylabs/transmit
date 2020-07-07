@@ -37,7 +37,7 @@ defmodule Transmit.S3Signer do
         {:ok,
          %{
            presigned_url: presigned_url,
-           file_url: "https://s3.amazonaws.com/#{bucket}/uploads/#{new_file_name}"
+           file_url: "https://#{bucket}.s3.amazonaws.com/#{path}/#{new_file_name}"
          }}
 
       {:error, _} = error ->

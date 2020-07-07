@@ -31,7 +31,8 @@ defmodule Transmit.S3Signer do
            ExAws.Config.new(:s3),
            :put,
            bucket,
-           Path.join(path, new_file_name)
+           Path.join(path, new_file_name),
+           virtual_host: true
          ) do
       {:ok, presigned_url} ->
         {:ok,
